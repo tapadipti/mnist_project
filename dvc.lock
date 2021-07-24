@@ -22,17 +22,17 @@ stages:
     params:
       params.yaml:
         train.batch_size: 128
-        train.dropout: 0.4
+        train.dropout: 0.45
         train.hidden_units: 64
         train.lr: 0.001
         train.num_epochs: 10
     outs:
     - path: output/model.h5
-      md5: 1564f609e4351ba8c262bb9ed282524a
+      md5: 92447e55b0847b946f6963b0f052879a
       size: 3680480
     - path: output/train_logs.csv
-      md5: 7b2ded0a180a7d9c04196c6e2917603e
-      size: 422
+      md5: f7341fda5bdfe3566c609e4c05b64c56
+      size: 423
   evaluate:
     cmd: python src/evaluate.py
     deps:
